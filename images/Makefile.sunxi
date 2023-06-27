@@ -20,3 +20,13 @@ image-$(CONFIG_MACH_PINE64_PINEPHONE) += barebox-pine64-pinephone_xload.img
 pblb-$(CONFIG_MACH_PINE64_PINEPHONE) += start_pine64_pinephone
 FILE_barebox-pine64-pinephone.img = start_pine64_pinephone.pblb
 image-$(CONFIG_MACH_PINE64_PINEPHONE) += barebox-pine64-pinephone.img
+
+pblb-$(CONFIG_MACH_PINE64_PINE64) += start_pine64_pine64
+FILE_barebox-pine64-pine64.img = start_pine64_pine64.pblb
+image-$(CONFIG_MACH_PINE64_PINE64) += barebox-pine64-pine64.img
+
+pblb-$(CONFIG_MACH_PINE64_PINE64) += start_pine64_pine64_xload
+MAX_PBL_IMAGE_SIZE_start_pine64_pine64_xload = 0x8000
+FILE_barebox-pine64-pine64_xload.img = start_pine64_pine64_xload.pblb.egonimg
+image-$(CONFIG_MACH_PINE64_PINE64) += barebox-pine64-pine64_xload.img
+

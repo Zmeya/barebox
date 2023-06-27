@@ -21,4 +21,9 @@ config MACH_PINE64_PINEPHONE
        select ARCH_SUN50I_A64
        select ARM_USE_COMPRESSED_DTB
 
+config MACH_PINE64_PINE64
+       bool "Allwinner A64 based Pine64 PINE64"
+       select ARCH_SUN50I_A64
+       select ARM_USE_COMPRESSED_DTB
+
 endif
