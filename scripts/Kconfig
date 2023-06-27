@@ -56,6 +56,13 @@ config RK_IMAGE
 	help
 	  This enables building the image creation tool for Rockchip SoCs
 
+config EGON_IMAGE
+       bool "Allwinner eGON image tool" if COMPILE_HOST_TOOLS
+       depends on ARCH_SUNXI || COMPILE_HOST_TOOLS
+       default y if ARCH_SUNXI
+       help
+         This enables building the image creation tool for Allwinner sunxi SoCs
+
 config OMAP_IMAGE
 	bool "TI OMAP image tools" if COMPILE_HOST_TOOLS
 	depends on ARCH_OMAP || COMPILE_HOST_TOOLS
