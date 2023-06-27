@@ -28,6 +28,7 @@ SECTIONS
 	.text      :
 	{
 		_stext = .;
+		*(SORT_BY_NAME(.text_head_soc_header*))
 		*(.text_head_prologue*)
 		*(.text_head_entry*)
 		__bare_init_start = .;
