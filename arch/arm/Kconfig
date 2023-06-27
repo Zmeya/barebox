@@ -272,6 +272,19 @@ config ARCH_STM32MP
 	select ARM_SMCCC
 	select ARM_USE_COMPRESSED_DTB
 
+config ARCH_SUNXI
+       bool "Allwinner SoCs"
+       depends on 64BIT
+       select CLKDEV_LOOKUP
+       select COMMON_CLK
+       select COMMON_CLK_OF_PROVIDER
+       select GPIOLIB
+       select HAVE_PBL_MULTI_IMAGES
+       select OFDEVICE
+       select OFTREE
+       select PINCTRL
+       select RELOCATABLE
+
 config ARCH_VERSATILE
 	bool "ARM Versatile boards (ARM926EJ-S)"
 	depends on 32BIT
@@ -331,6 +344,7 @@ source "arch/arm/mach-omap/Kconfig"
 source "arch/arm/mach-pxa/Kconfig"
 source "arch/arm/mach-rockchip/Kconfig"
 source "arch/arm/mach-socfpga/Kconfig"
+source "arch/arm/mach-sunxi/Kconfig"
 source "arch/arm/mach-stm32mp/Kconfig"
 source "arch/arm/mach-versatile/Kconfig"
 source "arch/arm/mach-vexpress/Kconfig"
