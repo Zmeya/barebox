@@ -1,3 +1,7 @@
 if ARCH_SUNXI
 
+config SUNXI_DEBUG_LL_UART_BASE
+       hex
+       default 0x01c28000
+
 endif

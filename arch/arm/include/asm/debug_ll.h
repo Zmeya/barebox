@@ -50,6 +50,8 @@
 #include <mach/uemd/debug_ll.h>
 #elif defined CONFIG_ARCH_SOCFPGA
 #include <mach/socfpga/debug_ll.h>
+#elif defined CONFIG_ARCH_SUNXI
+#include <mach/sunxi/debug_ll.h>
 #elif defined CONFIG_ARCH_PXA
 #include <mach/pxa/debug_ll.h>
 #elif defined CONFIG_ARCH_NOMADIK
