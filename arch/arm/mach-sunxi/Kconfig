@@ -1,7 +1,24 @@
 if ARCH_SUNXI
 
+config ARCH_SUN50I_A64
+       bool
+       select CPU_V8
+       select CPU_SUPPORTS_64BIT_KERNEL
+       select CLOCKSOURCE_ARM_ARCHITECTED_TIMER
+       select PINCTRL_SUN50I_A64
+       select HAS_DEBUG_LL
+       select PBL_RELOCATABLE
+       select PBL_FULLY_PIC
+       help
+         Allwiner A64 (sun50iw1) SoC
+
 config SUNXI_DEBUG_LL_UART_BASE
        hex
        default 0x01c28000
+
+config MACH_PINE64_PINEPHONE
+       bool "Allwinner A64 based Pine64 PinePhone"
+       select ARCH_SUN50I_A64
+       select ARM_USE_COMPRESSED_DTB
 
 endif

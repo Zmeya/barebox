@@ -11,3 +11,12 @@ $(obj)/%.egonimg: $(obj)/% FORCE
        $(call if_changed,egon_image)
 
 # ----------------------------------------------------------------------
+
+pblb-$(CONFIG_MACH_PINE64_PINEPHONE) += start_pine64_pinephone_xload
+MAX_PBL_IMAGE_SIZE_start_pine64_pinephone_xload = 0x8000
+FILE_barebox-pine64-pinephone_xload.img = start_pine64_pinephone_xload.pblb.egonimg
+image-$(CONFIG_MACH_PINE64_PINEPHONE) += barebox-pine64-pinephone_xload.img
+
+pblb-$(CONFIG_MACH_PINE64_PINEPHONE) += start_pine64_pinephone
+FILE_barebox-pine64-pinephone.img = start_pine64_pinephone.pblb
+image-$(CONFIG_MACH_PINE64_PINEPHONE) += barebox-pine64-pinephone.img
