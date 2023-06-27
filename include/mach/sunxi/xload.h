@@ -9,4 +9,6 @@
 int sunxi_mmc_bio_init(struct pbl_bio *bio, void __iomem *base,
                       unsigned int clock, unsigned int slot);
 
+void sun50i_mmc0_start_image(void);
+
 #endif
