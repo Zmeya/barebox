@@ -3,7 +3,7 @@
 #include <debug_ll.h>
 #include <linux/sizes.h>
 #include <linux/bitops.h>
-#include <mach/sunxi/barebox-arm.h>
+#include <asm/barebox-arm.h>
 #include <mach/sunxi/init.h>
 #include <mach/sunxi/xload.h>
 #include <mach/sunxi/egon.h>
@@ -43,7 +43,8 @@ static void debug_led_rgb(int rgb) {}
 static void debug_led_init(void) {}
 #endif
 
-SUN50I_A64_ENTRY_FUNCTION(start_pine64_pinephone, r0, r1, r2)
+// SUN50I_A64_ENTRY_FUNCTION
+ENTRY_FUNCTION(start_pine64_pinephone, r0, r1, r2)
 {
        extern char __dtb_z_sun50i_a64_pinephone_1_2_start[];
        void *fdt;
@@ -80,7 +81,8 @@ reset:
        sun50i_cpu_lowlevel_reset();
 }
 
-SUN50I_A64_ENTRY_FUNCTION(start_pine64_pinephone_xload, r0, r1, r2)
+// SUN50I_A64_ENTRY_FUNCTION
+ENTRY_FUNCTION(start_pine64_pinephone_xload, r0, r1, r2)
 {
 
        sunxi_egon_header(.text_head_soc_header0);

@@ -5,10 +5,10 @@
 # %.egonimg - convert into eGON.BT0 image
 # ----------------------------------------------------------------------
 quiet_cmd_egon_image = EGON  $@
-      cmd_egon_image = $(objtree)/scripts/egon_mkimage $< $@
+	cmd_egon_image = $(objtree)/scripts/egon_mkimage $< $@
 
 $(obj)/%.egonimg: $(obj)/% FORCE
-       $(call if_changed,egon_image)
+	$(call if_changed,egon_image)
 
 # ----------------------------------------------------------------------
 

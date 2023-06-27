@@ -3,7 +3,7 @@
 #include <debug_ll.h>
 #include <linux/sizes.h>
 #include <linux/bitops.h>
-#include <mach/sunxi/barebox-arm.h>
+#include <asm/barebox-arm.h>
 #include <mach/sunxi/init.h>
 #include <mach/sunxi/xload.h>
 #include <mach/sunxi/egon.h>
@@ -11,7 +11,8 @@
 #include <mach/sunxi/sun50i-regs.h>
 #include <mach/sunxi/sunxi-pinctrl.h>
 
-SUN50I_A64_ENTRY_FUNCTION(start_pine64_pine64, r0, r1, r2)
+// SUN50I_A64_ENTRY_FUNCTION
+ENTRY_FUNCTION(start_pine64_pine64, r0, r1, r2)
 {
        extern char __dtb_z_sun50i_a64_pine64_plus_start[];
        void *fdt;
@@ -44,7 +45,8 @@ reset:
        sun50i_cpu_lowlevel_reset();
 }
 
-SUN50I_A64_ENTRY_FUNCTION(start_pine64_pine64_xload, r0, r1, r2)
+// SUN50I_A64_ENTRY_FUNCTION
+ENTRY_FUNCTION(start_pine64_pine64_xload, r0, r1, r2)
 {
        u32 size;
 
