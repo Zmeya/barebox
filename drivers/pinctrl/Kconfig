@@ -107,4 +107,5 @@ config PINCTRL_STM32
 	  Pinmux and GPIO controller found on STM32 family
 endif
 
+source "drivers/pinctrl/sunxi/Kconfig"
 endmenu
